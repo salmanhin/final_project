@@ -1,0 +1,46 @@
+<div class="row">
+
+	<div class="col-md-4">
+
+	<%= image_tag @people.directory_img.url(:directories_show), class: "directory-show" %>
+
+	</div>
+
+		<div class="col-md-8">	
+
+			<div class="directories-info">	
+			
+				<h4 class="people-first-name"><span>First Name:</span> <%= @people.first_name %></h4>
+				<h4 class="people-last-name"><span>Last Name:</span> <%= @people.last_name %></h4>
+				<h4 class="people-tittle"><span>Title:</span> <%= @people.title %></h4>
+				<h4 class="people-previous"><span>Previous Company:</span> <%= @people.previous %></h4>
+				<h4 class="people-reporting-to"><span>Reporting To:</span> <%= @people.report_to %></h4>
+				<h4 class="people-office-location"><span>Office Location:</span> <%= @people.office_location %></h4>
+				<h4 class="people-seating-zone"><span>Seating Zone:</span> <%= @people.seating_zone %></h4>
+				<h4 class="people-fun-fact-one"><span>Fun Fact One:</span> <%= @people.fun_fact_one %></h4>
+				<h4 class="people-fun-fact-fwo"><span>Fun Fact Two:</span> <%= @people.fun_fact_two %></h4>
+				<h4 class="people-fun-fact-three"><span>Fun Fact Three:</span> <%= @people.fun_fact_three %></h4>
+
+			</div>
+		</div>
+
+
+
+
+
+
+
+<div class="links btn-group">
+
+<%= link_to "Back", root_path, class: "btn btn-custom" %>
+
+<% if user_signed_in? %>
+
+	<% if @people.user_id == current_user.id %>
+		<%= link_to "Edit", edit_directory_path(@people), class: "btn btn-custom" %>
+		<%= link_to "Delete", directory_path(@people), method: :delete, data: { confirm: "Are you sure you want to delete?" }, class: "btn btn-custom" %>
+	<% end %>
+
+<% end %>
+
+</div>

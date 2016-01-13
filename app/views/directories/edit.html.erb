@@ -1,0 +1,27 @@
+<div class="col-md-6 col-md-offset-3">
+
+	<div class="edit-directories-form">
+
+		<h1>Edit Empolyees </h1>
+
+		<%= simple_form_for @people, :html => { :multipart => true } do |f| %>
+		<%= f.select :category_id, @categories %>
+		<%= f.file_field :directory_img %>
+		<%= f.input :first_name, label: "First Name" %>
+		<%= f.input :last_name, label: "Last Name" %> 
+		<%= f.input :title, label: "Job Title" %>
+		<%= f.input :email %>
+		<%= f.input :previous, label: "Previous Company" %>
+		<%= f.input :report_to, label: "Reporting To" %>
+		<%= f.input :office_location, label: "Office Location" %>
+		<%= f.input :seating_zone, label: "Seating Zone" %>
+		<%= f.input :fun_fact_one, label: "Fun Fact One" %>
+		<%= f.input :fun_fact_two, label: "Fun Fact Two" %>
+		<%= f.input :fun_fact_three, label: "Fun Fact Three" %>
+		<%= f.button :button, :class => "btn-custom2" %>
+		<%= link_to "Back", root_path, :class => "btn-custom2" %>
+		<% end %>
+
+	</div>
+
+</div>
