@@ -1,3 +1,16 @@
+<% if @people.errors.any? %>
+  <div id="error_explanation">
+    <p><%= pluralize(@people.errors.count, "error") %> prohibited from being saved:</p>
+ 
+    <ul>
+    <% @people.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
 <%= simple_form_for @people, :html => { :multipart => true }  do |f| %>
 <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a Department") %>
 <%= f.file_field :directory_img %>

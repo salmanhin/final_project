@@ -1,3 +1,17 @@
+<% if @people.errors.any? %>
+  <div id="error_explanation">
+    <p><%= pluralize(@people.errors.count, "error") %> prohibited from being saved:</p>
+ 
+    <ul>
+    <% @people.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+
 <div class="col-md-6 col-md-offset-3">
 
 	<div class="edit-directories-form">

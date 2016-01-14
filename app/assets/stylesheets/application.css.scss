@@ -119,7 +119,11 @@ p.alert, .notice {
 		color: #fff;	
 	}
 
+
 }
+#searchInput {
+		width: 150px;
+	}
 
 .dropdown-menu > .active > a {
 	background-color: #f1c40f;
@@ -281,6 +285,7 @@ p.alert, .notice {
 
 .new-directories-form {
 	@include background-tile;
+	margin-bottom: 30px;
 
 	h1 {
 		margin-top: 0;
@@ -303,6 +308,7 @@ p.alert, .notice {
 .edit-directories-form {
 
 	@include background-tile;
+	margin-bottom: 30px;
 
 	h1 {
 		margin-top: 0;
@@ -350,6 +356,10 @@ p.alert, .notice {
 
 }
 
+#facebook {
+	padding: 15px;
+}
+
 #heart{
 	color: red
 }
@@ -357,3 +367,4 @@ p.alert, .notice {
 #footer{
 	margin-bottom: 10px
 }
+

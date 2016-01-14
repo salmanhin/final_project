@@ -6,6 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <body>
 
 	<nav class="navbar navbar-inverse">
@@ -28,15 +30,19 @@
 			<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 			<% else %>
 			<li><%= link_to "Sign In", new_user_session_path %></li>
-		
 			<% end %>
 
 			</ul>
+	
 
-			<form class="navbar-form pull-left">
-				<input type="test" class="form-control" placeholder="First Name" id="searchInput">
-				<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-			</form>
+				<div class="navbar-form navbar-left" role="search">
+				  <%= form_tag directories_path, :method => 'get', class: 'input-group'  do %>
+				    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'First Name', id:"searchInput" %>
+				    <span class="input-group-btn">
+				      <%= submit_tag "search", class: "btn btn-default" %>
+				    </span>
+				  <% end %>
+				</div>
 
 		
 			<ul class="nav navbar-nav pull-left">
@@ -61,13 +67,21 @@
 	</nav>
 
 
-<div class="navbar navbar-inverse navbar-fixed-bottom">
+<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 	<div class="container">
 		<footer id="footer">
 		<p class="navbar-text pull-left">&copy; 2016 Powered by Salman &middot; made with <span id="heart">&hearts;</span></p>
+
 			<a href="#" class="navbar-text pull-right">Back to top</a>
-			<p><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></p>
+
+			<%= link_to user_omniauth_authorize_path(:facebook) do %>
+			<div class="btn-md btn- btn-social btn-facebook id" id="facebook"> 
+        	<i class="fa fa-facebook"></i> Sign in with Facebook
+			</div>
+			<% end %>
+
 		</footer>
+		
 
 	</div>
 
