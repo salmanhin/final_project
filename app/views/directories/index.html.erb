@@ -24,7 +24,7 @@
     <tbody>
 
     <% @people.each do |person| %>
-      <tr class="danger">
+      <tr class="info">
           <td><%= link_to person.first_name, directory_path(person) %></td>
           <td><%= link_to person.last_name, directory_path(person) %></td>
           <td><%= person.email %></td>

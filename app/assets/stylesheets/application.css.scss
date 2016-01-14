@@ -358,6 +358,13 @@ p.alert, .notice {
 
 #facebook {
 	padding: 15px;
+			&:hover {
+			color: white !important;
+		}
+	
+}
+#searchbutton {
+	height: 34px;
 }
 
 #heart{
