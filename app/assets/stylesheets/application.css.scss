@@ -375,3 +375,12 @@ p.alert, .notice {
 	margin-bottom: 10px
 }
 
+.skinny_wrapper {
+	@include background-tile;
+
+	h2 {
+		margin-top: 0;
+	}
+
+}
+
