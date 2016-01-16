@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   #controllers:{omniauth_callbacks: "omniauth_callbacks"}
 
   resources :directories
+  resources :contacts, only: [:new, :create]
   root 'directories#index'
 
    get '/about-us' => 'directories#about'
