@@ -31,8 +31,12 @@
 /* General styles */
 
 body {
-	background-color: #f5f5f5;
-	font-family: 'Lora', serif;
+    background-color: black;
+    background: url(http://cdn2.hubspot.net/hubfs/372554/Greenhouse_Icons_and_Logos/greenhouse-og-thumb.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
