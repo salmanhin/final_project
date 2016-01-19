@@ -36,7 +36,7 @@
 			<ul class="nav navbar-nav pull-left">
 
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"aria-expanded="false"> Department <span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"aria-expanded="false">Department<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu pull-left">
 						<% Category.all.each do |category| %>
 						<li class="<%= 'active' if params[:category] == category.name %>">
@@ -82,8 +82,8 @@
 
 			<ul class="nav navbar-nav pull-left">
 			<li><%= link_to 'About Us', about_us_path %></li>
+			<li><%= link_to 'Contact Us', new_contact_path %></li>
 			</ul>
-
 
 		</footer>
 		
@@ -91,11 +91,9 @@
 	</div>
 
 </div>
-
-
-		<!-- <div class="poster-wrapper">
-			<body background="http://cdn2.hubspot.net/hubfs/372554/Greenhouse_Icons_and_Logos/greenhouse-og-thumb.png"></body>
-		</div> -->
+	<div class="poster-wrapper">
+		<body background="https://cdn2.hubspot.net/hubfs/372554/Greenhouse_Icons_and_Logos/greenhouse-og-thumb.png"></body>
+	</div>
 	<div>
 
 
