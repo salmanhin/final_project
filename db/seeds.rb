@@ -6,10 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+<<<<<<< HEAD
 Category.create ([
 	{
 		name: "Quality Assurance"
 	},
+=======
+Category.create([
+	{name: "Quality Assurance"}, 
+>>>>>>> 2ccacd6a2ea82c3ede9f0ef3e93783bedb0de09a
 	{
 		name: "Sales"
 	},
