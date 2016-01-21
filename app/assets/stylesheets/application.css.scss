@@ -380,7 +380,8 @@ p.alert, .notice {
 }
 
 .new-contacts-form {
-
+	@include background-tile;
+	
 	background-color: white;
     border-radius: 5px;
     box-sizing: border-box;
