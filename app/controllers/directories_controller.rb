@@ -22,6 +22,7 @@ class DirectoriesController < ApplicationController
 	#	@people = Directory.new #only show without restrictions.
 		@people = current_user.directory.build #only user will see it
 		@categories = Category.all.map{ |c| [c.name, c.id] }
+		@person = Directory.all
 	end
 	def create
 	#	@people = Directory.new(directory_params)

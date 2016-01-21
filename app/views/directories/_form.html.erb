@@ -19,7 +19,11 @@
 <%= f.input :title, label: "Job Title" %>
 <%= f.input :email %>
 <%= f.input :previous, label: "Previous Company" %>
-<%= f.input :report_to, label: "Reporting To" %>
+<label> Reports To</label>
+<br>
+<%= select_tag("Reporting To", options_from_collection_for_select(@person, "id", "first_name"), :prompt => "Select Manager")%>
+<br>
+<br>
 <%= f.input :office_location, label: "Office Location" %>
 <%= f.input :seating_zone, label: "Seating Zone" %>
 <%= f.input :fun_fact_one, label: "Fun Fact One" %>
