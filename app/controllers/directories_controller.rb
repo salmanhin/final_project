@@ -78,6 +78,11 @@ class DirectoriesController < ApplicationController
 		@people = Directory.find(params[:id])
 	end
 
+	def search
+		search = params[:search]
+		@people = Directory.search_for(search)
+	end
+
 end
 
 

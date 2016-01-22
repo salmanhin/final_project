@@ -15,11 +15,7 @@ class Directory < ActiveRecord::Base
 
 
 	def self.search(search)
-		if search
-			where(["first_name LIKE ?", "%#{search}%"])
-		else
-			all
-		end
+		where("first_name LIKE ?", "%#{search}%")
 	end
 
 end
