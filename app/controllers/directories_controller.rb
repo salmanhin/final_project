@@ -35,8 +35,9 @@ class DirectoriesController < ApplicationController
 		else
 			@people = current_user.directory.build
 			@categories = Category.all.map{ |c| [c.name, c.id] }
+			@person = Directory.all
 			render 'new'
-			flash[:notice] = current_user.errors.full_messages.join(" ")
+			flash[:notice] = "Fill out required fields"
 		end
 	end
 

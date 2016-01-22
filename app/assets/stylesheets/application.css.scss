@@ -400,3 +400,7 @@ p.alert, .notice {
    position: absolute;
    margin-left: 3px;
 }
+
+abbr[title="required"] {
+  display: none;
+}
