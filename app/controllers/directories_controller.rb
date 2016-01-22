@@ -36,7 +36,7 @@ class DirectoriesController < ApplicationController
 			@people = current_user.directory.build
 			@categories = Category.all.map{ |c| [c.name, c.id] }
 			@person = Directory.all
-			render 'new'
+			redirect_to new_directory_path
 			flash[:notice] = "Fill out required fields"
 		end
 	end
